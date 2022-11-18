@@ -1,0 +1,16 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+    - echo installing maven...
+    - yum install -y maven
+  build:
+    commands:
+      - echo Build completed on `date`
+      - mvn clean test package
+      
+
+artifacts:
+  files:
+    - '**/*'
